@@ -1,0 +1,60 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - heading "Laravel Authentication API" [level=1] [ref=e4]
+  - generic [ref=e5]:
+    - heading "API Endpoints" [level=2] [ref=e6]
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - heading "POST /api/auth/register" [level=3] [ref=e9]
+        - paragraph [ref=e10]: Register a new user
+        - code [ref=e13]: "{ \"name\": \"John Doe\", \"email\": \"john@example.com\", \"password\": \"password123\", \"password_confirmation\": \"password123\" }"
+      - generic [ref=e14]:
+        - heading "POST /api/auth/login" [level=3] [ref=e15]
+        - paragraph [ref=e16]: Login user
+        - code [ref=e19]: "{ \"email\": \"john@example.com\", \"password\": \"password123\" }"
+      - generic [ref=e20]:
+        - heading "GET /api/auth/profile" [level=3] [ref=e21]
+        - paragraph [ref=e22]: Get user profile (requires authentication)
+        - paragraph [ref=e23]: "Headers: Authorization: Bearer {token}"
+      - generic [ref=e24]:
+        - heading "POST /api/auth/logout" [level=3] [ref=e25]
+        - paragraph [ref=e26]: Logout user (requires authentication)
+        - paragraph [ref=e27]: "Headers: Authorization: Bearer {token}"
+      - generic [ref=e28]:
+        - heading "Email Verification Endpoints" [level=3] [ref=e29]
+        - generic [ref=e30]:
+          - paragraph [ref=e31]:
+            - strong [ref=e32]: "GET /api/email/verify/{id}/{hash}"
+            - text: "- Verify email"
+          - paragraph [ref=e33]:
+            - strong [ref=e34]: POST /api/email/resend
+            - text: "- Resend verification email"
+          - paragraph [ref=e35]:
+            - strong [ref=e36]: GET /api/email/status
+            - text: "- Check verification status"
+  - generic [ref=e37]:
+    - heading "API Test Interface" [level=2] [ref=e38]
+    - generic [ref=e39]:
+      - heading "Register New User" [level=3] [ref=e40]
+      - generic [ref=e41]:
+        - textbox "Name" [ref=e42]
+        - textbox "Email" [ref=e43]
+        - textbox "Password" [ref=e44]
+        - textbox "Confirm Password" [ref=e45]
+      - button "Register" [ref=e46] [cursor=pointer]
+    - generic [ref=e47]:
+      - heading "Login User" [level=3] [ref=e48]
+      - generic [ref=e49]:
+        - textbox "Email" [ref=e50]
+        - textbox "Password" [ref=e51]
+      - button "Login" [ref=e52] [cursor=pointer]
+    - heading "API Response" [level=3] [ref=e54]
+    - generic [ref=e56]:
+      - heading "Current Token:" [level=4] [ref=e57]
+      - textbox "Token will appear here after login" [ref=e58]
+      - generic [ref=e59]:
+        - button "Get Profile" [ref=e60] [cursor=pointer]
+        - button "Logout" [ref=e61] [cursor=pointer]
+```
